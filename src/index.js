@@ -1,12 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import './semantic/dist/semantic.min.css';
+import React from "react";
+import { render } from "react-dom";
+import store from "./js/store/index";
+import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { Provider } from "react-redux";
+import App from "./js/components/App";
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+render(
+  <Provider store={store}>
+    <Router>
+      <Route path="/u_message_fe/:filter?" component={App} />
+    </Router>
+  </Provider>,
+  document.getElementById("app")
+);
+registerServiceWorker();
+
+console.log(`Started`);
+
+const arr = [1, 2, 3];
+const iAmJavascriptES6 = () => console.log(...arr);
+window.iAmJavascriptES6 = iAmJavascriptES6;
