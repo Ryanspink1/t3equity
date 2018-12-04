@@ -1,0 +1,3 @@
+export const LOGIN = "LOGIN";
+export const ADD_USER_DATA = "ADD_USER_DATA";
+export const CHANGE_LOGIN_BUTTON_STATUS = "CHANGE_LOGIN_BUTTON_STATUS";

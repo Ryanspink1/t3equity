@@ -6,9 +6,59 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FAFAFA;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#signup-box-row {
+  margin-top: 2%;
+}
+#signup-box {
+  border: 1px solid #E6E6E6;
+  text-align: center;
+  border-radius: 1px 1px 1px 1px;
+  background-color: white;
+}
+
+#signup-box-header {
+  font-family: 'Playball',  cursive;
+  font-size:300%;
+  margin-top: 7%;
+  margin-bottom:3%;
+  font-weight: bold;
+}
+
+#signup-box-message {
+  color: #9F9999;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+#signup-form-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 7%;
+}
+
+#signup-login-button {
+  background-color: #3A98E9;
+  color: white;
+}
+
+#user-login-box {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top:3%;
+  border: 1px solid #E6E6E6;
+  text-align: center;
+  border-radius: 1px 1px 1px 1px;
+  background-color: white;
+}
+
+#login-modal {
+  text-align:center;
 }

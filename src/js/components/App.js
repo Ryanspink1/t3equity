@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { Route , Switch} from "react-router-dom";
-import PrivateRoute from '../helpers/privateRoute';
+import LoginPage from './Root/LoginPage';
 
 const App = (props) => (
     <Switch>
-
+      <Route exact path="/u_message_fe/" component={ LoginPage } />
     </Switch>
 );
 
