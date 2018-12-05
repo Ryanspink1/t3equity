@@ -15,7 +15,7 @@ code {
 }
 
 #signup-box-row {
-  margin-top: 2%;
+  margin-top: 7%;
 }
 #signup-box {
   border: 1px solid #E6E6E6;
@@ -39,6 +39,8 @@ code {
 }
 
 #signup-form-container {
+  border-top: 1px solid #E6E6E6;
+  padding-top:5%;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 7%;
@@ -47,6 +49,9 @@ code {
 #signup-login-button {
   background-color: #3A98E9;
   color: white;
+}
+#signup-login-button:hover {
+  background-color: #225b8b;
 }
 
 #user-login-box {

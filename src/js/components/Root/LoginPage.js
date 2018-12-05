@@ -4,13 +4,13 @@ import { Redirect} from 'react-router-dom';
 import { Grid, Image } from 'semantic-ui-react';
 import { addUserData } from '../../actions/index'
 import { login } from '../../actions/index'
-import Signup from './Signup';
-import Login from './Login';
+import LoginSignup from './LoginSignup';
+import LoginSignupSwitch from './LoginSignupSwitch';
 
 const mapDispatchToProps = dispatch => {
   return {
-    addUserData: userData => dispatch( addUserData(userData) ),
-    login: loggedIn => dispatch( login(loggedIn) )
+    addUserData: userData => dispatch(addUserData(userData)),
+    login: loggedIn => dispatch(login(loggedIn)),
   };
 };
 
@@ -25,13 +25,13 @@ class ConnectedLoginPage extends Component{
   }
 
   componentDidMount(){
-    this.checkLogin();
+    this.checkLoginStatus()
   }
 
-  checkLogin(){
-    if( sessionStorage.getItem("uMessageLoginTime") ){
+  checkLoginStatus(){
+    if( sessionStorage.getItem("uMessageloginTime") ){
       let d = Date.now() - sessionStorage.getItem("uMessageloginTime");
-      (d >= 1200000)
+      (d >= 600000)
         ? sessionStorage.clear()
         : this.autoLogin()
     }
@@ -52,11 +52,11 @@ class ConnectedLoginPage extends Component{
         <Grid>
           <Grid.Row centered id='signup-box-row'>
             <Grid.Column width={4}>
-              <Image src='https://s3-us-west-1.amazonaws.com/umessage/signupPic.png' size='large' />
+              <Image src='https://s3-us-west-1.amazonaws.com/umessage/signupPicEdited.png' size='large' />
             </Grid.Column>
             <Grid.Column width={4}>
-              <Signup/>
-              <Login/>
+              <LoginSignup/>
+              <LoginSignupSwitch/>
             </Grid.Column>
           </Grid.Row>
         </Grid>
