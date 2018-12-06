@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Image, Form, Button } from 'semantic-ui-react';
+import { Form, Button } from 'semantic-ui-react';
 import { addUserData } from '../../actions/index';
 import { login } from '../../actions/index';
 import { changeLoginButtonStatus } from '../../actions/index';
@@ -105,7 +105,11 @@ class ConnectedLoginSignup extends Component{
     .then(
       response => {
         const user = response.data
-        this.props.addUserData([user.email, jwt, user.id])
+        this.props.addUserData({
+                                email: user.email,
+                                jwt: jwt,
+                                id: user.id
+                              })
         this.props.login()
         sessionStorage.setItem('email', user.email)
         sessionStorage.setItem('jwt', jwt)

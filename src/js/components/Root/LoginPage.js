@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect} from 'react-router-dom';
-import { Grid, Image } from 'semantic-ui-react';
+import { Grid, Image, Responsive } from 'semantic-ui-react';
 import { addUserData } from '../../actions/index'
 import { login } from '../../actions/index'
 import LoginSignup from './LoginSignup';
@@ -31,7 +31,7 @@ class ConnectedLoginPage extends Component{
   checkLoginStatus(){
     if( sessionStorage.getItem("uMessageloginTime") ){
       let d = Date.now() - sessionStorage.getItem("uMessageloginTime");
-      (d >= 600000)
+      (d >= 2000000)
         ? sessionStorage.clear()
         : this.autoLogin()
     }
@@ -49,17 +49,33 @@ class ConnectedLoginPage extends Component{
   render() {
     if(this.props.loggedIn === false){
       return(
-        <Grid>
-          <Grid.Row centered id='signup-box-row'>
-            <Grid.Column width={4}>
-              <Image src='https://s3-us-west-1.amazonaws.com/umessage/signupPicEdited.png' size='large' />
-            </Grid.Column>
-            <Grid.Column width={4}>
-              <LoginSignup/>
-              <LoginSignupSwitch/>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+        <div>
+        <Responsive minWidth={ 928 }>
+          <Grid>
+            <Grid.Row centered id='signup-box-row'>
+              <Grid.Column width={4}>
+                <div className='root-image'>
+                  <Image src='https://s3-us-west-1.amazonaws.com/umessage/signupPicEdited.png' size='large' />
+                </div>
+              </Grid.Column>
+              <Grid.Column width={4}>
+                <LoginSignup/>
+                <LoginSignupSwitch/>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Responsive>
+        <Responsive maxWidth= { 929 }>
+          <Grid>
+            <Grid.Row centered id='signup-box-row'>
+              <Grid.Column width={10}>
+                <LoginSignup/>
+                <LoginSignupSwitch/>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Responsive>
+        </div>
       )
     }else{
       return(

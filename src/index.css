@@ -9,10 +9,28 @@ body {
   background-color: #FAFAFA;
 }
 
+#app-body{
+  background-image: url("https://wallpapertag.com/wallpaper/full/4/e/9/221426-cool-hd-real-space-wallpapers-1080p-1920x1080.jpg");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.root-image {
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 #signup-box-row {
   margin-top: 7%;
@@ -65,5 +83,133 @@ code {
 }
 
 #login-modal {
+  text-align: center;
+}
+
+#nav {
+  background-color: #0C2A83;
+  height:10%;
+}
+
+#home-grid {
+  height:100vh;
+}
+#home-row {
+  min-height: 90%;
+}
+#friend-navigator {
+  height:100%;
+  border: 2px solid #E6E6E6;
+  border-radius: 7px 7px 7px 7px;
+  background-color: white;
+}
+
+#friend-navigator-header{
+  width:100%;
+  height:10%;
+  border-radius: 0px 0px 0px 0px;
+  border-top:0px;
+  border-bottom:0px;
+  border-left:0px;
+  border-right:0px;
+  margin-bottom:0px;
+}
+
+.friend-navigator-header-button {
+  border-radius: 0px 0px 0px 0px !important;
+}
+.friend-navigator-header-button.active {
+
+}
+
+.friend-navigator-header-button-text{
+
+}
+
+#contacts-navigator {
+  height: 100%;
+  width: 100%;
+}
+
+#contacts-header {
+  width:100%;
+  height:5%;
+  border-radius: 0px 0px 0px 0px;
+  border-top:0px;
+  border-bottom:0px;
+  border-left:0px;
+  border-right:0px;
+  margin-top:2px;
+  margin-bottom:0px;
+}
+
+#contacts-friend-list {
+  margin-top:0%;
+  width: 100%;
+  height: 80%;
+}
+
+.contacts-list-item {
+  text-align: center;
+  padding-top:5% !important;
+  padding-bottom:5% !important;
+  /* border-bottom: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6; */
+}
+
+.contacts-list-item:hover {
+  cursor: pointer;
+  background-color: #E6E6E6;
+}
+
+.contacts-list-item.active {
+  background-color: #E6E6E6;
+}
+
+.add-friend-icon {
+  margin-left:5% !important;
+  color: green;
+}
+
+.delete-friend-icon {
+  color: red;
+  margin-right:5% !important;
+}
+
+.add-friend-icon:hover {
+  padding-left:5% !important;
+  transition: all 1s ease-in-out;
+  transform: scale(1.7);
+}
+
+.delete-friend-icon:hover {
+  transform: scale(1.7);
+  padding-right: 5% !important;
+  transition: all 1s ease-in-out;
+}
+
+.friend-request-form-item {
+  padding-top: 2% !important;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+#find-friend-fields {
   text-align:center;
+}
+.find-friend-form {
+  text-align:center;
+}
+
+.contacts-list-item {
+  padding-left:5% !important;
+  padding-right:5% !important;
+}
+
+.contacts-list-item-content{
+
+
+}
+
+.contacts-list-item-icon {
+
 }
