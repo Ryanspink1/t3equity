@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Button, Header, Image, Modal, Form } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import { changeLoginButtonStatus } from '../../actions/index';
 
 

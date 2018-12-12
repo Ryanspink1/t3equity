@@ -31,20 +31,21 @@ class ConnectedFormError extends Component {
     let errorMessage
     let errorStyle
 
-    if(this.props.formError === 'blank'){
-      errorMessage = 'Input(s) may not be blank.'
-      errorStyle = {
-        color: 'red'
-      }
-    }else if(this.props.formError === 'login'){
-      errorMessage = 'Invalid Login Credentials'
-      errorStyle = {
-        color: 'red'
-      }
-    }else if(this.props.formError === 'signUp'){
-      errorMessage = 'Incorrect format or username taken.'
-      errorStyle = {
-        color: 'red'
+    const errors = [
+        [ 'blank',                'Input(s) may not be blank.',          'red' ],
+        [ 'login',                'Invalid Login Credentials',           'red' ],
+        [ 'signUp',               'Incorrect format or username taken.', 'red' ],
+        [ 'noUserExists',         'Could not find User',                 'red' ],
+        [ 'friendRequestSuccess', 'Friend Request Sent!',                'green' ],
+        [ 'friendRequestFailure', 'User does not exist!',                'red' ],
+      ]
+
+    for(const error of errors){
+      if(error[0] === this.props.formError){
+        errorMessage = error[1]
+        errorStyle = {
+          color: error[2]
+        }
       }
     }
 
