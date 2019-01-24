@@ -12,7 +12,7 @@ import './index.css';
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Route path="/u_message_fe/" component={App} />
+      <Route path="/" component={App} />
     </Router>
   </Provider>,
    document.getElementById('root')
