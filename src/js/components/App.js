@@ -6,7 +6,7 @@ import RootPage from './RootPage/RootPage';
 
 const App = (props) => (
     <Switch>
-      <Route exact path="/" component={ RootPage } />
+      <Route path="/" component={ RootPage } />
     </Switch>
 );
 

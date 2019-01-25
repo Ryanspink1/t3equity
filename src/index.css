@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -9,11 +9,68 @@ body {
   background-color: #FAFAFA;
 }
 
-#app-body{
-  background-image: url("https://wallpapertag.com/wallpaper/full/4/e/9/221426-cool-hd-real-space-wallpapers-1080p-1920x1080.jpg");
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#grid {
+  height:100%;
+  margin-right:0px;
+  padding-right:0px;
+}
+
+#header-image{
+  margin-right:0px;
+  padding-right:0px;
+  height:20vh;
+  width:100%;
+  background:url(https://s3-us-west-1.amazonaws.com/t3equity/t3_equity_home.png);
+  background-position:center;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  border-bottom: 1px solid grey;
+  min-height:160px;
+}
+
+#nav {
+  height: 100%;
+  z-index:1;
+}
+
+#nav-column{
+  margin-top:2%;
+}
+
+#logo {
+  display:inline-block;
+  font-size: 375%;
+  font-weight: bold;
+  color:white;
+}
+
+#nav-menu{
+  padding-bottom:1%;
+  font-size:175%;
+  color: white;
+  text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+  width:100%;
+}
+
+.nav-menu-item{
+  padding-left: 1%;
+  padding-right:1%;
+  cursor:pointer;
+  transition: all .2s ease-in-out;
+}
+
+a{
+  color: white;
+}
+a:hover{
+  color: #2A2A2A !important;
+  text-shadow: none;
+  border-bottom: 2px solid grey;
+  transition: all .25s ease-in-out;
 }

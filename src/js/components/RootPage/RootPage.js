@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Menu, Grid, Button} from "semantic-ui-react";
+import Navbar from "../Navbar/Navbar.js"
+import FullScreenMenu from "../Navbar/FullScreenMenu.js"
+import { FullNav } from "../Navbar/FullNav.js"
 
 const mapStateToProps = state => {
   return {  };
@@ -13,13 +16,13 @@ class ConnectedRootPage extends Component{
 
   render(){
     return(
-      <Grid.Row id='root'>
-        <Grid.Column width={16}>
-          <div >
-            hello
+      <Grid id='grid'>
+        <Grid.Row>
+          <div id='header-image'>
           </div>
-        </Grid.Column>
-      </Grid.Row>
+        </Grid.Row>
+        <FullNav/>
+      </Grid>
     )
   }
 }
