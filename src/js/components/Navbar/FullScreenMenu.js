@@ -33,8 +33,8 @@ class ConnectedFullScreenMenu extends Component{
   }
 
   render(){
-    debugger;
     let active = this.props.activeItem
+    let activeStyle = { color:'white', textShadow:'none', borderBottom:'2px solid red', fontWeight:"bold"}
     let pages = ['Home', 'About', 'News', 'Newsletter', 'Contact']
     let menu = pages.map((page, index) =>(
      <span
@@ -46,8 +46,8 @@ class ConnectedFullScreenMenu extends Component{
             pathname: `/${page}`,
           }}
           style={ (page === active)
-            ? { color: 'black'}
-            : { color: 'white'}
+            ?  activeStyle
+            : { color: 'white', }
            }
           onClick = { (e)=>this.handleClick(e, page)}
         >

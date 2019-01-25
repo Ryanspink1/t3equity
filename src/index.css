@@ -14,7 +14,7 @@ code {
     monospace;
 }
 
-#grid {
+#grid{
   height:100%;
   margin-right:0px;
   padding-right:0px;
@@ -23,24 +23,40 @@ code {
 #header-image{
   margin-right:0px;
   padding-right:0px;
-  height:20vh;
+  height:25vh;
+  /* background:url(https://s3-us-west-1.amazonaws.com/t3equity/t3_equity_home.png); */
+  background:url(https://s3-us-west-1.amazonaws.com/t3equity/Screen+Shot+2019-01-25+at+12.54.17+AM.png);
+  background-repeat:no-repeat;
+  background-position: center center;
   width:100%;
-  background:url(https://s3-us-west-1.amazonaws.com/t3equity/t3_equity_home.png);
+  background-size: 35%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  min-height:160px;
+}
+#header-image-two{
+  margin-right:0px;
+  padding-right:0px;
+  height:25vh;
+  width:100%;
+  background-repeat:no-repeat;
+  background-position: right;
+  background: black;
   background-position:center;
   display: block;
   z-index: -1;
   position: absolute;
-  border-bottom: 1px solid grey;
-  min-height:160px;
+  min-height:250px;
 }
 
-#nav {
+#nav{
   height: 100%;
   z-index:1;
 }
 
 #nav-column{
-  margin-top:2%;
+  margin-top:7%;
 }
 
 #logo {
@@ -48,14 +64,28 @@ code {
   font-size: 375%;
   font-weight: bold;
   color:white;
+  font-family: 'Maven Pro', serif;
+
+  }
+
+.logo-text{
+  /* background: radial-gradient(white, #CECECE );
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+  color:white;
+  /* text-shadow: 0px 1px 4px #000000; */
+
 }
 
 #nav-menu{
   padding-bottom:1%;
   font-size:175%;
   color: white;
-  text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+  /* text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey; */
   width:100%;
+  font-family: 'Maven Pro', serif;
+  /* text-shadow: 2px 2px 7px #000000; */
+
 }
 
 .nav-menu-item{
@@ -69,8 +99,55 @@ a{
   color: white;
 }
 a:hover{
-  color: #2A2A2A !important;
+  color: #D9D9D9 !important;
+  /* color: #2A2A2A !important; */
   text-shadow: none;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid #D9D9D9;
+  /* border-bottom: 2px solid #2A2A2A; */
   transition: all .25s ease-in-out;
+}
+
+/* Contact Row */
+
+#contact-row{
+  width:100%;
+  background:black;
+  color:white;
+  min-height:650px;
+}
+
+#contact-row-column{
+  text-align: center;
+  height:75%;
+  border-top:2px solid white;
+}
+@keyframes fadeIn
+  to {
+     opacity: 1; }
+
+#contact-text-p{
+
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+  width:inherit;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+}
+
+#contact-row-column-text{
+  margin-top:10%;
+  font-size: 175%;
+  font-family: 'Maven Pro', serif;
+}
+
+#contact-name{
+  font-size: 200%;
+  font-weight:bold;
+  border-bottom:1px solid white;
+}
+#contact-title{
+  font-size: 110%;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import { Route , Switch} from "react-router-dom";
 import RootPage from './RootPage/RootPage';
-
+import Contact from './Contact/Contact';
 
 const App = (props) => (
     <Switch>

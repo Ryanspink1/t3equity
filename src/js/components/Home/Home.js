@@ -7,7 +7,7 @@ import { Redirect, NavLink, withRouter} from 'react-router-dom';
 const mapStateToProps = state => {
   return {  };
 }
-class ConnectedNavbar extends Component{
+class ConnectedHome extends Component{
   constructor(){
     super();
     this.state={
@@ -19,15 +19,13 @@ class ConnectedNavbar extends Component{
     return(
         <Grid.Row centered id='nav'>
           <Grid.Column width={16} id='nav-column' verticalAlign={'middle'}>
-            <div id='logo'>
-              <span className='logo-text'>T</span><sup style={{ color: 'red' }}>3</sup> <span className='logo-text'>Equity Labs</span>
-            </div>
+            Whatchu
           </Grid.Column>
         </Grid.Row>
     )
   }
 }
 
-const Navbar = connect()(ConnectedNavbar);
+const Home = connect()(ConnectedHome);
 
-export default Navbar;
+export default Home;
