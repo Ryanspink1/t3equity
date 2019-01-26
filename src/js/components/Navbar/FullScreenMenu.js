@@ -55,12 +55,15 @@ class ConnectedFullScreenMenu extends Component{
         </Link>
       </span>
     ))
+    const { contextRef } = {};
     return(
       <Grid.Row centered id='full-screen-menu'>
-        <Grid.Column width={16} verticalAlign={'middle'} text-align='center'>
+        <Grid.Column id='full-screen-menu-col' width={16} verticalAlign={'middle'} text-align='center'>
+          <Sticky context={contextRef}>
           <div id='nav-menu'>
             { menu }
           </div>
+          </Sticky>
         </Grid.Column>
       </Grid.Row>
     )

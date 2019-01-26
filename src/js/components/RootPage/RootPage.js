@@ -7,6 +7,7 @@ import { FullNav } from "../Navbar/FullNav.js";
 import { Route , Switch} from "react-router-dom";
 import Contact from '../Contact/Contact';
 import Home from '../Home/Home';
+import News from '../News/News';
 
 
 
@@ -20,7 +21,7 @@ class ConnectedRootPage extends Component{
   }
 
   render(){
-    let componentChoice= [['Home', <Home/>],['Contact', <Contact/>]]
+    let componentChoice= [['Home', <Home/>],['Contact', <Contact/>],['News', <News/>]]
     let componentRender
     componentChoice.forEach((component)=>(
       (component[0] === this.props.activeItem)
