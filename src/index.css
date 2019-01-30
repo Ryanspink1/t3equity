@@ -7,20 +7,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FAFAFA;
+  background:black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+p
 #grid{
   height:100%;
   margin-right:0px;
   padding-right:0px;
 }
 
-#header-image{
+.header-image{
   margin-right:0px;
   padding-right:0px;
   height:25vh;
@@ -33,6 +34,18 @@ code {
   z-index: 0;
   position: absolute;
   min-height:160px;
+}
+
+.header-image.mob{
+transform: scale(1.2);
+}
+
+.header-image.mob.two{
+transform: scale(1.5);
+}
+
+.header-image.mob.three{
+transform: scale(1.7);
 }
 
 #header-image-two{
@@ -73,20 +86,26 @@ code {
   padding-right:0px;
 }
 
-#logo {
+.logo {
   display:inline-block;
   font-size: 375%;
   font-weight: bold;
   color:white;
   font-family: 'Maven Pro', serif;
+}
+.logo.mob {
+  font-size: 300%;
+  height:100% !important;
+  padding-left:5%;
+  padding-right:5%;
+}
 
-  }
 
 .logo-text{
   color:white;
 }
 
-#nav-menu{
+.nav-menu{
   font-size:175%;
   color: white;
   width:100%;
@@ -97,7 +116,14 @@ code {
   margin-bottom:0px;
   padding-right:0px;
   padding-left:0px;
+  box-shadow: 0 3px 2px -2px gray;
+
 }
+
+.nav-menu.mobile{
+  font-size:150% !important;
+}
+
 
 .nav-menu-item{
   padding-left: 1%;
@@ -121,6 +147,7 @@ a:hover{
 /* Contact Row */
 
 #contact-row{
+  height:100%;
   width:100%;
   background:black;
   color:white;
@@ -148,18 +175,31 @@ a:hover{
   border-right: 2px solid red;
 }
 
-#contact-row-column-text{
+.contact-row-column-text{
   margin-top:10%;
   font-size: 175%;
   font-family: 'Maven Pro', serif;
 }
 
-#contact-name{
+.contact-row-column-text.mob{
+
+}
+
+.contact-name{
   font-size: 200%;
   font-weight:bold;
   border-bottom:1px solid white;
 }
-#contact-title{
+
+.contact-name.mob{
+  font-size: 140%;
+}
+
+.contact-title{
+  font-size: 110%;
+}
+
+.contact-title.mob{
   font-size: 110%;
 }
 
@@ -188,23 +228,57 @@ a:hover{
   -ms-animation: fadeIn ease 2s;
 }
 
-#home-row-two{
+.home-row-two{
   /* height:40vh; */
-  padding-top: 2%;
-  padding-bottom: 2%;
+  min-height:35vh;
+  padding-top: 2% !important;
+  padding-bottom: 2% !important;
   border-top: 2px solid grey;
   background: linear-gradient(to bottom,#E3E3E3, #8B8B8B);
-  border-bottom: 2px solid grey;
+}
 
-  /* background: linear-gradient(to right, #CAE3E3, #3D8181); */
+.home-row-two.mob{
+  border-bottom: none !important;
+  border-top: none !important;
+  margin-top: none !important;
+  margin-bottom: none !important;
+  padding-top:5% !important;
+  padding-bottom:5% !important;
+  box-shadow:none !important;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 2s;
+}
+
+.home-row-two.mob.first{
+  padding-top:5% !important;
+  background: linear-gradient(to bottom,white, #DDDADA);
+
+}
+
+
+.home-row-two.mob.second{
+  background: linear-gradient(to bottom,#DDDADA, #7F7E7E);
+
+}
+.home-row-two.mob.third{
+  background: linear-gradient(to bottom,#7F7E7E, black);
+  border-top: 1px solid #7F7E7E !important;
+
 }
 
 .home-row-two-col{
-
   height:100%;
   padding-left:30px;
   padding-right:30px;
   /* border: 1px solid black; */
+}
+
+.home-row-two-col.mobile{
+  border-bottom:none !important;
+  border-top:none !important;
 }
 
 .home-row-two-card{
@@ -214,6 +288,26 @@ a:hover{
   margin: 0 auto !important;
   font-family: 'Maven Pro', serif;
   text-align:center;
+}
+
+.home-row-two-card.news{
+  border-radius: 2px 2px 2px 2px !important;
+}
+
+.home-row-two-card.news:hover{
+  box-shadow: 2px 2px 8px white !important;
+  background-color: #ABAAAA !important;
+}
+
+.news-card-col{
+  margin-bottom: 5% !important;
+}
+
+.news-rows{
+  margin-top:5%;
+  margin-bottom:5%;
+  padding-left:5% !important;
+  padding-right:5% !important;
 }
 
 .home-row-two-card-pic{
@@ -227,7 +321,6 @@ a:hover{
 .card{
   Width:90%;
   border:none !important;
-  /* box-shadow: none !important; */
   box-shadow:  3px 3px 8px #5C5B5B !important;
   height:100%;
 
@@ -268,8 +361,66 @@ a:hover{
 .home-row-three-col.two{
   color:white;
   padding-left:40px;
+  text-align:center;
 }
 
 a[href^="tel:"].phone-white {
   font-color:inherit;
+}
+
+/* About */
+
+.about-row{
+  padding-top:8% !important;
+  padding-bottom:10% !important;
+  background:black !important;
+  min-height:80vh;
+  height:100%;
+}
+.about-row.mob{
+  padding-top:7% !important;
+  padding-bottom:7% !important;
+
+}
+.about-row.tab{
+  padding-top:10% !important;
+  padding-bottom:10% !important;
+
+}
+
+.about-row-column{
+  border-left: 2px solid red;
+  border-right:2px solid red;
+  padding-left:60px !important;
+  padding-right:60px !important;
+}
+
+.about-row-column.tab{
+  padding-left:5% !important;
+  padding-right:5% !important;
+}
+.about-row-column.mob{
+  padding-left:5% !important;
+  padding-right:5% !important;
+}
+
+.about-text{
+  text-indent: 50px;
+  font-family: 'Maven Pro', serif;
+  font-size:225%;
+  background-color:black;
+  color:white;
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+}
+
+.about-text.mob{
+  font-size:120% !important;
+}
+
+.home-row-two-card.news{
+  margin-bottom: 10% !important;
 }

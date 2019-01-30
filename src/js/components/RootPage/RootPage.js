@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Menu, Grid, Button} from "semantic-ui-react";
+import { Menu, Grid, Button, Responsive} from "semantic-ui-react";
 import Navbar from "../Navbar/Navbar.js";
 import FullScreenMenu from "../Navbar/FullScreenMenu.js";
 import { FullNav } from "../Navbar/FullNav.js";
@@ -8,6 +8,7 @@ import { Route , Switch} from "react-router-dom";
 import Contact from '../Contact/Contact';
 import Home from '../Home/Home';
 import News from '../News/News';
+import About from '../About/About';
 
 
 
@@ -21,7 +22,7 @@ class ConnectedRootPage extends Component{
   }
 
   render(){
-    let componentChoice= [['Home', <Home/>],['Contact', <Contact/>],['News', <News/>]]
+    let componentChoice= [['Home', <Home/>],['Contact', <Contact/>],['News', <News/>],['About', <About/>]]
     let componentRender
     componentChoice.forEach((component)=>(
       (component[0] === this.props.activeItem)
@@ -31,8 +32,10 @@ class ConnectedRootPage extends Component{
     return(
       <Grid id='grid'>
         <Grid.Row>
-          <div id='header-image'>
-          </div>
+          <Responsive minWidth={1297}>
+            <div className='header-image'>
+            </div>
+          </Responsive>
           <div id='header-image-two'>
           </div>
         </Grid.Row>

@@ -21,16 +21,12 @@ class ConnectedHomeRowThree extends Component{
 
   render(){
     return(
-      <>
-        <Grid.Row columns={ 2 } centered id='home-row-three'>
-          <Grid.Column className='home-row-three-col one'>
-            <Image onClick={ this.handleLogoClick.bind(this) } id='t-three-logo' src='https://s3-us-west-1.amazonaws.com/t3equity/Screen+Shot+2019-01-25+at+11.27.24+PM.png'/>
-          </Grid.Column>
+        <Grid.Row columns={ 1 } centered id='home-row-three'>
           <Grid.Column verticalAlign={'middle'} className='home-row-three-col two'>
             <strong>
-            T3 Equity Labs llc
+            t<sup style={{ color: 'red' }}>3</sup> equity labs llc
             <br/>
-            <a class="phone-white" href="tel:+303641-3127">(303) 641-3127</a>
+            <a class="phone-white" href="tel:+3034788630">(303) 478-8630</a>
             <br/>
             5 Columbine Ln
             Littleton, Colorado
@@ -38,7 +34,6 @@ class ConnectedHomeRowThree extends Component{
             </strong>
           </Grid.Column>
         </Grid.Row>
-        </>
     )
   }
 }
