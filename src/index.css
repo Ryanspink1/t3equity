@@ -290,24 +290,52 @@ a:hover{
   text-align:center;
 }
 
+.news-title-column{
+  margin-top:40px !important;
+  text-align:center !important;
+}
+
+.news-page-title{
+  font-size:400%;
+  font-weight: bold;
+  font-family: 'Maven Pro', serif;
+  border-bottom:2px solid red;
+  color:white;
+  color: linear-gradient(to bottom,#E3E3E3, #8B8B8B);
+
+}
+
 .home-row-two-card.news{
+  background:linear-gradient(to bottom, white, #B6B6B6) !important;
+  /* background: linear-gradient(to bottom,#E3E3E3, #8B8B8B); */
   border-radius: 2px 2px 2px 2px !important;
 }
 
 .home-row-two-card.news:hover{
   box-shadow: 2px 2px 8px white !important;
-  background-color: #ABAAAA !important;
+  background: linear-gradient(to bottom,#E3E3E3, #8B8B8B) !important;
+  /* background-color: #ABAAAA !important; */
+  /* background:linear-gradient(to bottom,white,#E3E3E3) !important; */
 }
 
 .news-card-col{
   margin-bottom: 5% !important;
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
 }
 
 .news-rows{
   margin-top:5%;
   margin-bottom:5%;
-  padding-left:5% !important;
-  padding-right:5% !important;
+  padding-left:2.5% !important;
+  padding-right:2.5% !important;
+  margin-left:2.5% !important;
+  margin-right:2.5% !important;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
 }
 
 .home-row-two-card-pic{
