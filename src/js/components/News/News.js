@@ -26,8 +26,8 @@ class ConnectedNews extends Component{
   checkNewsStatus(){
     if( sessionStorage.getItem("t3NewsArticles") ){
       let d = Date.now() - sessionStorage.getItem("t3NewsRetrieveTime");
-      (d >= 2000000)
-        ? sessionStorage.clear()
+      (d >= 3000000)
+        ? this.getNewsArticles()
         : this.retrieveSessionNews()
     }else{
       this.getNewsArticles()
@@ -35,7 +35,6 @@ class ConnectedNews extends Component{
   }
 
   retrieveSessionNews(){
-    debugger;
     let retrievedStories = sessionStorage.getItem("t3NewsArticles")
     let stories = JSON.parse(retrievedStories)
     let organizedStories = stories.sort(function(a, b) {

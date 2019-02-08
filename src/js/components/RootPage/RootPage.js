@@ -8,6 +8,7 @@ import { Route , Switch} from "react-router-dom";
 import Contact from '../Contact/Contact';
 import Home from '../Home/Home';
 import News from '../News/News';
+import Newsletter from '../Newsletter/Newsletter';
 import About from '../About/About';
 
 
@@ -22,7 +23,7 @@ class ConnectedRootPage extends Component{
   }
 
   render(){
-    let componentChoice= [['Home', <Home/>],['Contact', <Contact/>],['News', <News/>],['About', <About/>]]
+    let componentChoice= [['Home', <Home/>],['Contact', <Contact/>],['News', <News/>],['Newsletter', <Newsletter/>],['About', <About/>]]
     let componentRender
     componentChoice.forEach((component)=>(
       (component[0] === this.props.activeItem)

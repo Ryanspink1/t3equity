@@ -452,3 +452,29 @@ a[href^="tel:"].phone-white {
 .home-row-two-card.news{
   margin-bottom: 10% !important;
 }
+
+
+/* Newsletter */
+
+.newsletter-row{
+  margin-left:7% !important;
+  margin-right:7% !important;
+  padding-top:60px !important;
+  padding-bottom:60px !important;
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+}
+
+.newsletter-col{
+  text-align:center !important;
+  color:white;
+  font-size:150%;
+  font-family: 'Maven Pro', serif;
+  cursor: pointer;
+
+}
+
+.newsletter-name:hover{
+  /* color:red !important; */
+  border-bottom: 2px solid white !important;
+}
