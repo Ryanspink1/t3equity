@@ -10,6 +10,8 @@ import Home from '../Home/Home';
 import News from '../News/News';
 import Newsletter from '../Newsletter/Newsletter';
 import About from '../About/About';
+import Private from '../Private/Private'
+import AutoLogin from '../Private/AutoLogin';
 
 
 
@@ -23,7 +25,15 @@ class ConnectedRootPage extends Component{
   }
 
   render(){
-    let componentChoice= [['Home', <Home/>],['Contact', <Contact/>],['News', <News/>],['Newsletter', <Newsletter/>],['About', <About/>]]
+    let componentChoice= [
+      ['Home', <Home/>],
+      ['Contact', <Contact/>],
+      ['News', <News/>],
+      ['Newsletter', <Newsletter/>],
+      ['About', <About/>],
+      ['Login', <AutoLogin/>],
+      ['Private', <AutoLogin/>]]
+
     let componentRender
     componentChoice.forEach((component)=>(
       (component[0] === this.props.activeItem)

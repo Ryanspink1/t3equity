@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import FormError from '../helpers/FormError';
-import { AxiosRequest } from "../../helpers/axios";
-
+import { addUserData } from '../../actions/index';
+import { login } from '../../actions/index';
+import { Grid, Form, Button } from "semantic-ui-react";
 import Private from './Private';
+import { RequestError } from '../helpers/errorHandling';
+import { AxiosRequest } from '../helpers/axios';
+import FormError from '../helpers/FormError';
+import { addFormError } from "../../actions/index";
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -23,7 +27,8 @@ class ConnectedLogin extends Component{
     this.state={
       email: "",
       password: "",
-    }
+    };
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event){
@@ -75,10 +80,10 @@ class ConnectedLogin extends Component{
                                 id: user.id
                               })
         this.props.login()
-        sessionStorage.setItem('email', user.email)
-        sessionStorage.setItem('jwt', jwt)
-        sessionStorage.setItem('id', user.id.toString())
-        sessionStorage.setItem('uMessageloginTime', Date.now().toString())
+        sessionStorage.setItem('t3_email', user.email)
+        sessionStorage.setItem('t3_jwt', jwt)
+        sessionStorage.setItem('t3_id', user.id.toString())
+        sessionStorage.setItem('t3EquityLoginTime', Date.now().toString())
       }
     ).catch((error) => {
       RequestError(error)
@@ -86,10 +91,23 @@ class ConnectedLogin extends Component{
   }
 
   render(){
-
+    return(
+      <Grid.Row columns={1} centered>
+        <Grid.Column width={8}>
+          <div id='login-form-container'>
+            <FormError/>
+            <Form className="login-form">
+              <Form.Input onChange={ this.handleChange } id="email" placeholder='Email' width={16} ></Form.Input>
+              <Form.Input onChange={ this.handleChange } id="password" type='password' placeholder='Password' width={16}></Form.Input>
+              <Form.Field control={ Button } onClick={ (e)=>this.login(e) } id='login-button' size='small' >Login</Form.Field>
+            </Form>
+          </div>
+        </Grid.Column>
+      </Grid.Row>
+    )
   }
 }
 
-const Login = connect(mapStateToProps, MapDispatchToProps)(ConnectedLogin);
+const Login = connect(mapStateToProps, mapDispatchToProps)(ConnectedLogin);
 
 export default Login;

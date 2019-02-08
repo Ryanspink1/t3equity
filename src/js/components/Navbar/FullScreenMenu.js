@@ -11,7 +11,10 @@ const mapDispatchToProps = dispatch => {
 };
 
 const mapStateToProps = state => {
-  return { activeItem: state.activeItem };
+  return {
+    activeItem: state.activeItem,
+    loggedIn: state.loggedIn
+   };
 }
 
 
@@ -36,6 +39,9 @@ class ConnectedFullScreenMenu extends Component{
     let active = this.props.activeItem
     let activeStyle = { color:'white', textShadow:'none', borderBottom:'2px solid red', fontWeight:"bold"}
     let pages = ['Home', 'About', 'News', 'Newsletter', 'Contact']
+    pages = (this.props.loggedIn === false)
+      ? pages.concat('Login')
+      : pages.concat('Private')
     let menu = pages.map((page, index) =>(
      <span
         key={ index }

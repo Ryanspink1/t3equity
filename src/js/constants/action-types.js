@@ -1,3 +1,7 @@
 export const CHANGE_ACTIVE = "CHANGE_ACTIVE";
 export const LOGIN = "LOGIN";
 export const ADD_USER_DATA = "ADD_USER_DATA";
+export const ADD_FORM_ERROR = "ADD_FORM_ERROR";
+export const CLEAR_FORM_ERROR = "CLEAR_FORM_ERROR";
+export const CHANGE_ADMIN_VIEW = "CHANGE_ADMIN_VIEW";
+export const ADD_NEWSLETTERS = "ADD_NEWSLETTERS";

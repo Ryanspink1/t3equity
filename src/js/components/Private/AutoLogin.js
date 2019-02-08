@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Private from './Private'
+import Private from './Private';
+import { addUserData } from '../../actions/index';
+import { login } from '../../actions/index';
+import Login from './Login';
+import { Redirect, history} from 'react-router-dom';
+
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -18,16 +23,20 @@ class ConnectedAutoLogin extends Component{
     super();
     this.state={
 
-    }
+    };
   }
 
   componentDidMount(){
-    this.checkLoginStatus()
+    if(this.props.loggedIn === false){
+      this.checkLoginStatus()
+    }else{
+
+    }
   }
 
   checkLoginStatus(){
-    if( sessionStorage.getItem("t3EquityloginTime") ){
-      let d = Date.now() - sessionStorage.getItem("t3EquityloginTime");
+    if( sessionStorage.getItem("t3EquityLoginTime") ){
+      let d = Date.now() - sessionStorage.getItem("t3EquityLoginTime");
       (d >= 2000000)
         ? sessionStorage.clear()
         : this.autoLogin()
@@ -44,15 +53,17 @@ class ConnectedAutoLogin extends Component{
   }
 
   render(){
-    let loginDirector = (this.props.loggedIn == false)
+    const loginDirector = (this.props.loggedIn === false)
       ? <Login/>
       : <Private/>
     return(
-      { loginDirector }
+      <>
+        { loginDirector }
+      </>
     )
   }
 }
 
-const AutoLogin = connect(mapStateToProps, MapDispatchToProps)(ConnectedAutoLogin);
+const AutoLogin = connect(mapStateToProps, mapDispatchToProps)(ConnectedAutoLogin);
 
 export default AutoLogin;

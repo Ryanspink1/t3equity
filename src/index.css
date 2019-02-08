@@ -478,3 +478,57 @@ a[href^="tel:"].phone-white {
   /* color:red !important; */
   border-bottom: 2px solid white !important;
 }
+
+/* ADMIN */
+
+.admin-newsletter-view{
+  background-color: white;
+  height: 450px;
+  overflow:auto;
+}
+
+.admin-newsletter-list{
+    height:100%;
+}
+
+.admin-newsletter-view{
+  background-color: white;
+  height: 450px;
+  overflow:auto;
+}
+
+.newsletter-list-item{
+  padding-top:1% !important;
+  padding-bottom:1% !important;
+  background-color: #E3E3E3;
+  border-bottom:1px solid #8B8B8B;
+  padding-left:1% !important;
+}
+.newsletter-list-item-icon{
+  color:red;
+  cursor: pointer;
+
+}
+.newsletter-list-item-icon:hover{
+  color:black;
+}
+
+.newsletter-list-item:hover{
+  background: linear-gradient(to bottom,#E3E3E3, #8B8B8B);
+}
+
+.newsletter-list-item-content{
+  text-align:center;
+  color:black !important;
+  font-size:150%;
+  font-family: 'Maven Pro', serif;
+
+}
+.newsletter-list-item-link{
+  text-align:center;
+  color: blue !important;
+  border-bottom:1px solid blue;
+}
+.newsletter-list-item-link:hover{
+
+}
