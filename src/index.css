@@ -464,7 +464,11 @@ a[href^="tel:"].phone-white {
   border-left: 2px solid red;
   border-right: 2px solid red;
   margin-bottom:60px;
-
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
 }
 .newsletter-row.mob{
   margin-bottom:20px;

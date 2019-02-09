@@ -4,12 +4,14 @@ import { Redirect, Link} from 'react-router-dom';
 import { AxiosRequest } from '../helpers/axios';
 import { RequestError } from '../helpers/errorHandling';
 import { addNewsletters } from '../../actions/index';
+import { removeNewsletters } from '../../actions/index';
 import { List, Icon} from 'semantic-ui-react';
 
 
 const mapDispatchToProps = dispatch => {
   return {
     addNewsletters: newsletters => dispatch(addNewsletters(newsletters)),
+    removeNewsletters: newsletters => dispatch(removeNewsletters(newsletters)),
   };
 };
 
@@ -45,19 +47,13 @@ class ConnectedAdminNewsletterList extends Component{
       headers: {'Authorization' :'Bearer ' + this.props.jwt},
       data:    null
     }
-    debugger;
-
     AxiosRequest(
       requestParams
     )
     .then(
       response => {
-        const newsletters = response.data
-        let newNewsletter
-        newsletters.forEach((newsletter)=>{
-          newNewsletter = [[newsletter.id, newsletter.name, newsletter.location]]
-          this.props.addNewsletters(newNewsletter)
-        })
+        let newsletter = response.data
+        this.props.removeNewsletters([[newsletter.id, newsletter.name, newsletter.location]])
       }
     ).catch((error) => {
       RequestError(error)

@@ -46,7 +46,6 @@ class ConnectedAdminCreateNewsletter extends Component{
   }
 
   postNewsletter(fd){
-    debugger;
     const requestParams = {
       method:  'post',
       url:     `http://localhost:3001/api/v1/users/${this.props.id}/newsletters`,

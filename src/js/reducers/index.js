@@ -6,6 +6,7 @@ import { ADD_FORM_ERROR } from "../constants/action-types";
 import { CLEAR_FORM_ERROR } from "../constants/action-types";
 import { CHANGE_ADMIN_VIEW } from "../constants/action-types";
 import { ADD_NEWSLETTERS } from "../constants/action-types";
+import { REMOVE_NEWSLETTERS } from "../constants/action-types";
 
 
 
@@ -37,6 +38,9 @@ const rootReducer = (state = initialState, action) => {
       return { ...state, adminView: action.payload};
     case ADD_NEWSLETTERS:
       return { ...state, newsletters: state.newsletters.concat([action.payload])};
+    case REMOVE_NEWSLETTERS:
+      debugger;
+      return { ...state, newsletters: state.newsletters.filter(newsletter=>newsletter[0][0] != action.payload[0][0])};
     default:
       return state;
   }
