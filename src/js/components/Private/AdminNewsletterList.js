@@ -100,8 +100,8 @@ class ConnectedAdminNewsletterList extends Component{
           onClick={(e)=>this.handleDelete(newsletter[0][0])}
         />
         <List.Content className='newsletter-list-item-content'>
-          <List.Header>
-            { newsletter[0][1] }
+          <List.Header >
+            <span className='newsletter-list-item-header'>{ newsletter[0][1] }</span>
           </List.Header>
           <List.Description>
           <a className='newsletter-list-item-link' key={index} href={newsletter[0][2]}>{ newsletter[0][2] }</a>

@@ -435,7 +435,7 @@ a[href^="tel:"].phone-white {
 .about-text{
   text-indent: 50px;
   font-family: 'Maven Pro', serif;
-  font-size:225%;
+  font-size:200%;
   background-color:black;
   color:white;
   animation: fadeIn ease 2s;
@@ -463,20 +463,34 @@ a[href^="tel:"].phone-white {
   padding-bottom:60px !important;
   border-left: 2px solid red;
   border-right: 2px solid red;
+  margin-bottom:60px;
+
+}
+.newsletter-row.mob{
+  margin-bottom:20px;
+  margin-top: 20px;
+    min-height:650px;
 }
 
 .newsletter-col{
   text-align:center !important;
-  color:white;
-  font-size:150%;
-  font-family: 'Maven Pro', serif;
-  cursor: pointer;
+  color:white !important;
+  font-size:150% !important;
+  font-family: 'Maven Pro', serif !important;
+  cursor: pointer !important;
+  max-height:10%;
+  margin-top: 2% !important;
+  margin-bottom: 2% !important;
 
 }
 
 .newsletter-name:hover{
   /* color:red !important; */
   border-bottom: 2px solid white !important;
+}
+.newsletter-name{
+  /* color:red !important; */
+
 }
 
 /* ADMIN */
@@ -499,22 +513,36 @@ a[href^="tel:"].phone-white {
 
 .newsletter-list-item{
   padding-top:1% !important;
-  padding-bottom:1% !important;
+  padding-bottom:2% !important;
   background-color: #E3E3E3;
   border-bottom:1px solid #8B8B8B;
   padding-left:1% !important;
 }
-.newsletter-list-item-icon{
+.newsletter-list-item:hover .newsletter-list-item-icon{
   color:red;
+  -moz-transform: rotate(180deg) !important;
+  -webkit-transform:  rotate(180deg) !important;
+  -o-transform: rotate(180deg) !important;
+  transform: rotate(180deg) !important;
+}
+.newsletter-list-item-icon{
+  color:black;
   cursor: pointer;
-
+  -moz-transition: all 1s ease !important;
+	/* WebKit */
+	-webkit-transition: all 1s ease !important;
+	/* Opera */
+	-o-transition: all 1s ease !important;
+	/* Standard */
+	transition: all 1s ease !important;
 }
 .newsletter-list-item-icon:hover{
-  color:black;
+
 }
 
 .newsletter-list-item:hover{
   background: linear-gradient(to bottom,#E3E3E3, #8B8B8B);
+
 }
 
 .newsletter-list-item-content{
@@ -523,6 +551,12 @@ a[href^="tel:"].phone-white {
   font-size:150%;
   font-family: 'Maven Pro', serif;
 
+}
+
+.newsletter-list-item-header{
+  border-bottom: 1px solid black;
+  padding-left:1%;
+  padding-right:1%;
 }
 .newsletter-list-item-link{
   text-align:center;
